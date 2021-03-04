@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+	<div id="header">
+		<div>
+			<a href="/" id="logo"><img src="{%static 'images/newlogo.png'%}" alt="Logo"></a>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li class="current">
+					<a href="/product">Product</a>
+				</li>
+				<li>
+					<a href="/services">Services</a>
+				</li>
+				<li>
+					<a href="/blog">Blog</a>
+				</li>
+				<li>
+					<a href="/about">About</a>
+				</li>
+				<li>
+					<a href="/contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div id="featured">
+			<h1>World&#39;s Finest and Elegant Tuxedo</h1>
+		</div>
+		<div id="content">
+			<div id="product">
+				<ul>
+					{%for product in products%}
+					<li>
+						<img src="{{product.p_image.url}}" alt="Image">
+						<h2>{{product.p_name}}</h2>
+						<p>
+							{{product.p_description | safe}}
+						</p>
+						<span>{{product.p_price}}</span>
+					</li>
+					{%endfor%}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}

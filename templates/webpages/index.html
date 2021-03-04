@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+	<div id="header">
+		<div>
+			<a href="/" id="logo"><img src="{%static 'images/newlogo.png'%}" alt="Logo"></a>
+			<ul>
+				<li class="current">
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/product">Product</a>
+				</li>
+				<li>
+					<a href="/services">Services</a>
+				</li>
+				<li>
+					<a href="/blog">Blog</a>
+				</li>
+				<li>
+					<a href="/about">About</a>
+				</li>
+				<li>
+					<a href="/contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div id="featured">
+			<div class="first">
+				<div>
+					<h2>It'a all in the measurments</h2>
+					<p>
+						It's time to leave unflattering off-the-rack sizes behind and join a personalized future. It's time you start wearing clothes made only for you.
+					</p>
+					<a href="/product" id="shopnow">Shop Now</a>
+				</div>
+				<span><img src="{%static 'images/tuxedo9.png'%}" alt="Image"></span>
+			</div>
+			<div class="last">
+				<h3>Handcrafted and best fit</h3>
+				<ul>
+					<li>
+						<a href="/product"><img src="{%static 'images/tuxedo2.jpg'%}" alt="Image"></a>
+						<p>
+							This is just a place holder
+						</p>
+					</li>
+					<li>
+						<a href="/product"><img src="{%static 'images/tuxedo3.jpg'%}" alt="Image"></a>
+						<p>
+							This is just a place holder
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="home">
+				<div class="section">
+					<h4>About</h4>
+					<h1>We are Makers of Custom Handmade Tailored Suits </h1>
+					<ul>
+						<li>
+							<img src="{%static 'images/handmade1.jpg'%}" alt="Image">
+							<h2>Handmade</h2>
+							<p>
+								This is just a place holder, so you can see what the site would look like.
+							</p>
+						</li>
+						<li>
+							<img src="{%static 'images/design1.jpg'%}" alt="Image">
+							<h2>Design</h2>
+							<p>
+								This is just a place holder, so you can see what the site would look like.
+							</p>
+						</li>
+						<li>
+							<img src="{%static 'images/perfectfit1.jpg'%}" alt="Image">
+							<h2>Perfect Fit</h2>
+							<p>
+								This is just a place holder, so you can see what the site would look like.
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="sidebar">
+					<h4>Blog</h4>
+					<ul>
+						<li>
+							<span>May 1, 2012  posted by: Jo</span>
+							<h2>This is just a place holder,</h2>
+							<p>
+								so you can see what the site would look like. <a href="/blog" class="readmore"> - read more</a>
+							</p>
+						</li>
+						<li>
+							<span>May 2, 2012  posted by: Anne</span>
+							<h2>This is just a place holder,</h2>
+							<p>
+								so you can see what the site would look like. <a href="/blog" class="readmore"> - read more</a>
+							</p>
+						</li>
+						<li>
+							<span>May 3, 2012  posted by: Marie</span>
+							<h2>This is just a place holder,</h2>
+							<p>
+								so you can see what the site would look like. <a href="/blog" class="readmore"> - read more</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

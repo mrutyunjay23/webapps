@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+	<div id="header">
+		<div>
+			<a href="index.html" id="logo"><img src="{%static 'images/newlogo.png'%}" alt="Logo"></a>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/product">Product</a>
+				</li>
+				<li>
+					<a href="/services">Services</a>
+				</li>
+				<li class="current">
+					<a href="/blog">Blog</a>
+				</li>
+				<li>
+					<a href="/about">About</a>
+				</li>
+				<li>
+					<a href="/contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div id="featured">
+		</div>
+		<div id="content">
+			<div id="blog">
+				<div id="article">
+					<span>{{blog_open.date}}</span>
+					<img src="{{blog_open.image.url}}" class="imagecenter" alt="Image">
+					<h2>{{blog_open.title}}</h2>
+						{{blog_open.blog_text | safe}}
+				</div>
+				<div class="sidebar">
+					<div>
+						<h3>Categories:</h3>
+						<ul>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Recent:</h3>
+						<ul>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3>Archive:</h3>
+						<ul>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+							<li>
+								<a href="/blog">This is just a place holder</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

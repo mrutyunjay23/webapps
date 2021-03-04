@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block content %}
+	<div id="header">
+		<div>
+			<a href="/" id="logo"><img src="{%static 'images/newlogo.png'%}" alt="Logo"></a>
+			<ul>
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="/product">Product</a>
+				</li>
+				<li>
+					<a href="/services">Services</a>
+				</li>
+				<li class="current">
+					<a href="/blog">Blog</a>
+				</li>
+				<li>
+					<a href="/about">About</a>
+				</li>
+				<li>
+					<a href="/contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="body">
+		<div id="featured">
+		</div>
+		<div id="content">
+			<div id="blog">
+				<div class="section">
+
+					<ul>
+						{% for blog in all_blog %}
+						<li>
+							<span>{{blog.date}}</span>
+							<h2>{{ blog.title}}</h2>
+							<a href="/article/{{blog.pk}}/"><img src="{{blog.image.url}}" class="contain" alt="Image" style="width:200px;height:150px;object-fit:contain"></a>
+
+								{{blog.blog_text | safe | truncatewords:25}}
+                            <a href="/article/{{blog.pk}}" class="readmore"> - read more</a>
+
+						</li>
+						{% endfor %}
+					</ul>
+
+				</div>
+				<div class="sidebar">
+					<div>
+						<h3>Recent:</h3>
+						<ul>
+							{% for blog in all_blog %}
+							<li>
+								<a href="/article/{{blog.pk}}">{{blog.title}}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
