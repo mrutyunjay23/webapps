@@ -8,7 +8,7 @@ from djmoney.models.fields import MoneyField
 class Blog(models.Model):
     title = models.TextField(max_length=30)
     blog_text = RichTextField(null=True)
-    image = models.ImageField(upload_to='media/blog_images/%Y/%m/', null=True)
+    image = models.ImageField(upload_to='blog_images/%Y/%m/', null=True)
     date = models.DateField(auto_now=True, null=True)
 
     def __str__(self):
